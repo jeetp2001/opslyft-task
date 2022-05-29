@@ -10,4 +10,12 @@ Steps for creating lambda function:
 <br>
 
 -> The internshiptask lambda function contains the code for sending mail, storing instance id to dynamodb and creating cloudwatch events.<br>
--> The terminate-ins lambda function contains the code for terminating the ec2 instance according to thier id
+-> The terminate-ins lambda function contains the code for terminating the ec2 instance according to thier id<br>
+
+
+The execution of function:<br>
+-> I created a dynamodb table for storing the insatnce id.<br>
+1) First the 'internshiptask' lambda function will run and check the tags of the ec2 instances present.
+2) If the tagging criteria is not fullfilled then it will send a mail to that particular instance and will add that instance into dynamodb table.
+3) After this, it will create a cloudwatch event which is scheduled 6 hours after sending the mail to ec2 instance and this event will call another lambda function which will extract the instance id from dynamodb table and terminate it.
+4) This whole task is included in free tier. 

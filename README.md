@@ -9,5 +9,5 @@ Steps for creating lambda function:
 5) Go to the configuraton section if you want to add permissions to the lambda function.
 <br>
 
--> The internshiptask lambda function contains the code for sending mail, storing instance id to dynamodb and creating cloudwatch events.
+-> The internshiptask lambda function contains the code for sending mail, storing instance id to dynamodb and creating cloudwatch events.<br>
 -> The terminate-ins lambda function contains the code for terminating the ec2 instance according to thier id

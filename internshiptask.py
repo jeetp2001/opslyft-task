@@ -10,7 +10,7 @@ from dateutil import parser
 from boto3.dynamodb.conditions import Key
 
 username = 'jeetrpatel2001@gmail.com'
-password = 'jeetp2001'
+password = '********'
 imapserver = imaplib.IMAP4_SSL('imap.gmail.com')
 imapserver.login(username,password)
 
